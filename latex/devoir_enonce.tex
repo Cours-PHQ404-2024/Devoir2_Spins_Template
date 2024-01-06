@@ -103,7 +103,7 @@ réels (\texttt{float}).
 
 \subsection{Vérification du Hamiltonien}\label{subsec:verification-du-hamiltonien}
 
-Il est important de vérifer votre implémentation avec des tests unitaires.
+\noindent Il est important de vérifer votre implémentation avec des tests unitaires.
 Vous pouvez, par exemple, calculer à la main la matrice du Hamiltonien pour
 $N = 3$ et un $J$ de votre choix et de comparer cette dernière à celle retournée par
 votre fonction.
@@ -113,7 +113,7 @@ un fichier \texttt{test\_hamiltonian.py}.
 
 \subsection{Calculs des basses énergies}\label{subsec:calculs-des-basses-energies}
 
-Implémenter une fonction qui permet d'obtenir les énergies de l'état fondamental
+\noindent Implémenter une fonction qui permet d'obtenir les énergies de l'état fondamental
 $E_0$ et du premier état excité $E_1$ à l'aide de la bibliothèque \texttt{scipy}.
 Ensuite, calculer ces énergies pour $N$ de 2 à 20 inclusivement.
 Comme le calcul peut prendre un certain temps, il est suggéré de
@@ -125,7 +125,7 @@ de la bibliothèque \texttt{pandas} ou manuellement.
 
 \subsection{Algorithme epsilon}\label{subsec:algorithme-epsilon}
 
-Il s'agit ici d'implémenter une fonction qui prend en entrée
+\noindent Il s'agit ici d'implémenter une fonction qui prend en entrée
 une liste de points (un tableau \texttt{numpy} par exemple) et
 retourne une estimation de la convergence de la série à l'aide
 de l'algorithme epsilon.
@@ -134,7 +134,7 @@ L'algorithme est décrit à la section 8.5.4 des notes de David Sénéchal.
 
 \subsection{Vérification de l'algorithme espsilon}\label{subsec:verification-de-l'algorithme-espsilon}
 
-La série de Gregory
+\noindent La série de Gregory
 \begin{equation}
   4\qty(1 - \frac{1}{3} + \frac{1}{5} - \frac{1}{7} + \frac{1}{9} \ldots)
 \end{equation}
@@ -147,7 +147,7 @@ Ajouter vos tests unitaires dans le fichier \texttt{test\_epsilon.py}.
 
 \subsection{Extrapolation vers $N \to \infty$}\label{subsec:extrapolation-vers-n-to-infty}
 
-Vous devez utiliser l'algorithme epsilon
+\noindent Vous devez utiliser l'algorithme epsilon
 pour estimer la valeur de $E_0 / N$ et de $E_1 - E_0$ lorsque $N \to \infty$.
 Vous devez comparer l'extrapolation en utilisant tous les points,
 seulement les points pour $N$ pair et seulement les points pour $N$ impair.
@@ -162,7 +162,7 @@ et retournent des \texttt{NotImplementedError}.
 
 \section{Vérification}\label{sec:verification}
 
-Il est important de vérifer vos implémentations.
+\noindent Il est important de vérifer vos implémentations.
 En effet, vous devez vous assurer que vos méthodes fonctionnent correctement et pour ce faire, vous devez rouler et
 implémenter des tests unitaires qui testent chacune de vos classes et fonctions.
 De plus, vous devriez tester si les résultats obtenus sont logiques.
