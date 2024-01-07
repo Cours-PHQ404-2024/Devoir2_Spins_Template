@@ -2,7 +2,8 @@ import numpy as np
 
 
 def gregory_series(x: float, n: int) -> np.ndarray:
-    r"""Calculates the n terms of the Gregory series for a given x.
+    r"""Calculates the n terms of the Gregory series for a given x. The returned values
+    are each term in the summation.
 
     The Gregory series is given by:
 
@@ -19,7 +20,7 @@ def gregory_series(x: float, n: int) -> np.ndarray:
     indexes = np.arange(n)
     signs = (-1)**indexes
     denominator = 2 * indexes + 1
-    numerator = signs * x**denominator
+    numerator = signs * (x ** denominator)
     return numerator / denominator
 
 

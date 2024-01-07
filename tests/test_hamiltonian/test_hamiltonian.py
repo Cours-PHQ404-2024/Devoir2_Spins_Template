@@ -22,7 +22,7 @@ from src.utils import to_dense
 )
 def test_hamiltonian(n, j, h):
     model = Heisenberg(n, j)
-    hamiltonian = model.hamiltonian
+    hamiltonian = to_dense(model.hamiltonian)
     np.testing.assert_allclose(hamiltonian, h, atol=1e-4, rtol=1e-4)
 
 
@@ -36,5 +36,5 @@ def test_hamiltonian(n, j, h):
 )
 def test_real_hamiltonian(n, j):
     model = Heisenberg(n, j)
-    hamiltonian = model.hamiltonian
+    hamiltonian = to_dense(model.hamiltonian)
     np.testing.assert_allclose(hamiltonian, hamiltonian.conj(), atol=1e-4, rtol=1e-4)
