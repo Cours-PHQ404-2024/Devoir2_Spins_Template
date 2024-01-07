@@ -23,3 +23,14 @@ def to_sparse(array, dtype=None) -> sparse:
 Sx = to_sparse(np.array([[0, 1], [1, 0]])/2)
 Sy = to_sparse(np.array([[0, -1], [1, 0]])/2)
 Sz = to_sparse(np.array([[1, 0], [0, -1]])/2)
+
+
+def to_dense(sparse_matrix: sparse) -> np.ndarray:
+    """Converts a given sparse matrix to a dense array.
+
+    :param sparse_matrix: The sparse matrix to convert.
+    :type sparse_matrix: sparse
+    :return: The dense array.
+    :rtype: np.ndarray
+    """
+    return sparse_matrix.toarray()

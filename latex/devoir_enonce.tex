@@ -126,7 +126,7 @@ de la bibliothèque \texttt{pandas} ou manuellement.
 \subsection{Algorithme epsilon}\label{subsec:algorithme-epsilon}
 
 \noindent Il s'agit ici d'implémenter une fonction qui prend en entrée
-une liste de points (un tableau \texttt{numpy} par exemple) et
+un vecteur de points et
 retourne une estimation de la convergence de la série à l'aide
 de l'algorithme epsilon.
 L'algorithme est décrit à la section 8.5.4 des notes de David Sénéchal.
@@ -149,8 +149,8 @@ Ajouter vos tests unitaires dans le fichier \texttt{test\_epsilon.py}.
 
 \noindent Vous devez utiliser l'algorithme epsilon
 pour estimer la valeur de $E_0 / N$ et de $E_1 - E_0$ lorsque $N \to \infty$.
-Vous devez comparer l'extrapolation en utilisant tous les points,
-seulement les points pour $N$ pair et seulement les points pour $N$ impair.
+Vous devez comparer l'extrapolation en utilisant tous les points (tous les $N$),
+seulement les points pour $N$ pair (les $N$ pairs) et seulement les points pour $N$ impair (les $N$ impairs).
 Faites ensuite un graphique pour chaque quantité avec les valeurs calculées
 et un trait horizontal pour chacune des trois méthodes d'extrapolation.
 

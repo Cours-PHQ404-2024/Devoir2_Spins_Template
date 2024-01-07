@@ -1,6 +1,7 @@
 import pytest
 import numpy as np
 from src.hamiltonian import Heisenberg
+from src.utils import to_dense
 
 
 @pytest.mark.parametrize(
@@ -25,3 +26,15 @@ def test_hamiltonian(n, j, h):
     np.testing.assert_allclose(hamiltonian, h, atol=1e-4, rtol=1e-4)
 
 
+@pytest.mark.parametrize(
+    "n, j",
+    [
+        (n, j)
+        for j in [1, 2, 3]
+        for n in [2, 3, 4]
+    ],
+)
+def test_real_hamiltonian(n, j):
+    model = Heisenberg(n, j)
+    hamiltonian = model.hamiltonian
+    np.testing.assert_allclose(hamiltonian, hamiltonian.conj(), atol=1e-4, rtol=1e-4)
